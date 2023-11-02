@@ -63,10 +63,26 @@ class ASInfo():
                 print(str(peer_name) + ' AS#: ' + str(as_num))
 
 
-    def retrieve_upstream_graph(self):
+    def retrieve_upstream_graphs(self):
         #api gives us a link to a graph
         #this method will give this to us
         pass
 
-    def print_downstreams(self):
-        pass
+    def print_downstreams(self,v6=False):
+        asn_downstreams = self.downstreams
+        len_up = len(asn_downstreams['data']['ipv4_downstreams'])
+
+        print(f"\n{len_up} IPv4 Downstream ASes: ")
+        for peer in range(len_up):
+            peer_name = asn_downstreams['data']['ipv4_downstreams'][peer]['name']
+            as_num = ['data']['ipv4_downstreams'][peer]['asn']
+            print(str(peer_name) + ' AS#: ' + str(as_num))
+        
+        if v6 == True:
+            len_up = len(asn_downstreams['data']['ipv6_downstreams'])
+
+            print(f"\n{len_up} IPv6 Downstream ASes: ")
+            for peer in range(len_up):
+                peer_name = asn_downstreams['data']['ipv6_downstreams'][peer]['name']
+                as_num = ['data']['ipv6_downstreams'][peer]['asn']
+                print(str(peer_name) + ' AS#: ' + str(as_num))
