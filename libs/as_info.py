@@ -1,4 +1,4 @@
-import as_api
+from libs import as_api
 
 class ASInfo():
     def __init__(self,asn) -> None:

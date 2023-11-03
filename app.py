@@ -1,7 +1,8 @@
-from as_info import ASInfo
+from libs.as_info import ASInfo
+from libs import ip
 from tkinter import *
 from tkinter.ttk import *
-from tkinter.messagebox import showinfo
+import tkinter.font as font
 
 #from tkinter_functions import display_peers
    
@@ -10,11 +11,11 @@ from tkinter.messagebox import showinfo
 # the application creating 
 # main window object named root
 root = Tk()
-
-
+root['background']='#856ff8'
+myFont = font.Font(family='Courier')
 # giving title to the main window
 root.title("AS Information")
-root.geometry('980x530')
+root.geometry('1130x530')
 
 
 #target_asn = StringVar()
@@ -22,6 +23,26 @@ as_entry_label = Label(root,text= "Enter ASN:")
 as_entry_label.grid(column=1,row=1,sticky='e')
 as_entry = Entry(root)
 as_entry.grid(column= 2, row = 1,sticky='w')
+
+ip_entry_label = Label(root,text = "                          Get ASN from IP address: ")
+ip_entry_label.grid(column = 3, row = 1,sticky='w')
+ip_entry = Entry(root)
+ip_entry.grid(column=4, row = 1,sticky='w')
+
+def ip_enter_clicked():
+    text_display.delete("1.0", "end")
+    ip_entered = ip_entry.get()
+    ip_address = ip.ipaddress_check(ip_entered)
+    ip_data = ip.bgp_ip_lookup(ip_address)
+    asn = ip_data['data']['prefixes'][0]['asn']['asn']
+    display_text = 'ASN: ' + str(asn)
+    text_display.insert("end", display_text)
+    pass
+
+ip_enter_btn = Button(root,text = "Enter",command = ip_enter_clicked)
+ip_enter_btn.grid(column=4, row = 1)
+
+
 
 asns = [123,1222,333]
 as_info_objects = []
