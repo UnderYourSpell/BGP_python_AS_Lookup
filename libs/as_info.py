@@ -113,3 +113,17 @@ class ASInfo():
                 print(str(peer_name) + ' AS#: ' + str(as_num))
 
         return down_string_text
+
+    def print_details(self):
+        details = self.details
+        out_str = ""
+        out_str += 'ASN: ' + str(details['data']['asn']) + '\n'
+        out_str += 'Name: ' + str(details['data']['name']) + '\n'
+        out_str += 'Description: ' + str(details['data']['description_short']) + '\n'
+        out_str += 'Country: ' + str(details['data']['country_code']) + '\n'
+        out_str += 'Website: ' + str(details['data']['website']) + '\n'
+        out_str += 'looking glass: ' + str(details['data']['looking_glass']) + '\n'
+        out_str += 'Traffic Estimation: ' + str(details['data']['traffic_estimation']) + '\n'
+        out_str += 'Traffic Ratio: ' + str(details['data']['traffic_ratio']) + '\n'
+
+        return out_str
