@@ -9,7 +9,7 @@ To install requirments
 pip install -r requirements.txt
 ```
 
-To ro run application just run app.py
+To run application just run app.py
 
 ## API Source
 https://bgpview.docs.apiary.io/# 
