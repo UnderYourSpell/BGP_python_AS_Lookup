@@ -4,9 +4,10 @@ This module allows one to look up information about an Autonomous System for use
 Runs on python 3.11.5
 
 To install requirments
-'''
+
+```
 pip install -r requirements.txt
-'''
+```
 
 To ro run application just run app.py
 
