@@ -16,7 +16,7 @@ def ipaddress_check(input_ip):
     except ValueError:
         print('\nAddress is invalid: %s' % input_ip)
         print('Exiting code, please retry with a valid IPv4 or IPv6 address')
-        sys.exit()
+        
 
 def bgp_ip_lookup(ip_addres):
     """Function to lookup a specific IP"""
