@@ -47,7 +47,7 @@ class ASInfo():
         ixs = len(asn_ixs['data'])
         ix_text = ""
         
-        ix_text += '\n' + str(self.details['data']['name']) +' is at ' + str(ixs) +  ' Internet Exchange Points: '
+        ix_text += '\n' + str(self.details['data']['name']) +' is at ' + str(ixs) +  ' Internet Exchange Points: ' + '\n'
 
         #print(f"\n{ixs} Internet Exchange Points: ")
         for ix in range(ixs):

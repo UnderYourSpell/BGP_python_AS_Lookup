@@ -52,10 +52,14 @@ as_info_objects = []
 # function to display user text when
 # button is clicked
 def enter_clicked():
-    new_asn = int(as_entry.get())
-    new_asn_object = ASInfo(new_asn)
-    as_info_objects.append(new_asn_object)
-    asns.append(new_asn)
+    text_display.delete("1.0", "end")
+    if as_entry.get() == "":
+        text_display.insert("end","No ASN entered")
+    else:
+        new_asn = int(as_entry.get())
+        new_asn_object = ASInfo(new_asn)
+        as_info_objects.append(new_asn_object)
+        asns.append(new_asn)
 # button widget with red color text inside
 enter_btn = Button(root, text = "Enter" , command=enter_clicked)
 # Set Button Grid
