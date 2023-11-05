@@ -2,6 +2,7 @@
 
 This module allows one to look up information about an Autonomous System for use in BGP research.
 Runs on python 3.11.5
+Requires an internet connection
 
 To install requirments
 
@@ -9,7 +10,13 @@ To install requirments
 pip install -r requirements.txt
 ```
 
-To run application just run app.py
+To run application 
+```
+python app.py
+```
+
+### Additional Information
+Originally created for Computer Networks A365 at the University of Alaska Anchorage
 
 ## API Source
 https://bgpview.docs.apiary.io/# 
