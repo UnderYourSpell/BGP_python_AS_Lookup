@@ -18,5 +18,7 @@ python app.py
 ### Additional Information
 Originally created for Computer Networks A365 at the University of Alaska Anchorage
 
+Based on code from: https://github.com/pyjoepy06/bgp_python_path_lookup
+
 ## API Source
 https://bgpview.docs.apiary.io/# 
