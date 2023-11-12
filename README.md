@@ -1,8 +1,7 @@
 # BGP_python_AS_Lookup
 
-This module allows one to look up information about an Autonomous System for use in BGP research.
+This allows one to look up information about an Autonomous System for use in BGP research.
 Runs on python 3.11.5
-Requires an internet connection
 
 To install requirments
 
