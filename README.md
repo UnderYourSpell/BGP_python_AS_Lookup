@@ -1,6 +1,6 @@
 # BGP_python_AS_Lookup
 
-This allows one to look up information about an Autonomous System for use in BGP research.
+This allows one to look up information about an Autonomous System.
 Runs on python 3.11.5
 
 To install requirments
@@ -16,8 +16,6 @@ python app.py
 
 ### Additional Information
 Originally created for Computer Networks A365 at the University of Alaska Anchorage
-
-Based on code from: https://github.com/pyjoepy06/bgp_python_path_lookup
 
 ## API Source
 https://bgpview.docs.apiary.io/# 
